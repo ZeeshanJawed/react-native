@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import Fontisto from 'react-native-vector-icons/Fontisto';
-import AntDesign from 'react-native-vector-icons/AntDesign';
 
 function RegisterScreen({ navigation }: { navigation: any }) {
     const [username, setUsername] = useState('');
@@ -16,7 +14,7 @@ function RegisterScreen({ navigation }: { navigation: any }) {
                 <Text style={styles.title}>Register</Text>
 
                 <View style={styles.inputWrapper}>
-                    <AntDesign name="user" size={24} color="#aaa" />
+                    <Icon name="person" size={24} color="#aaa" />
                     <TextInput
                         style={styles.input}
                         placeholder="Username"
@@ -27,7 +25,7 @@ function RegisterScreen({ navigation }: { navigation: any }) {
                 </View>
 
                 <View style={styles.inputWrapper}>
-                    <Fontisto name="email" size={24} color="#aaa" />
+                    <Icon name="email" size={24} color="#aaa" />
                     <TextInput
                         style={styles.input}
                         placeholder="Email"
