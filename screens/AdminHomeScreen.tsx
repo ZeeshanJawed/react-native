@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, FlatList, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 import DateTimePickerModal from 'react-native-modal-datetime-picker'; // Import DateTime Picker
+import ExportToPDF from '../components/ExportToPDF';
 
 function AdminHomeScreen({ navigation }: { navigation: any }) {
     const [searchUser, setSearchUser] = useState('');
@@ -80,6 +81,8 @@ function AdminHomeScreen({ navigation }: { navigation: any }) {
                 onConfirm={handleConfirm}
                 onCancel={hideDatePicker}
             />
+
+            <ExportToPDF user={users} />
         </View>
     );
 }
